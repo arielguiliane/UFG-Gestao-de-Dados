@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-08-24T10:35:39.774675",
+  "database": "movies.db",
+  "quality_metrics": {
+    "completeness": {
+      "title": {
+        "filled": 4551,
+        "total": 4551,
+        "percentage": 100.0
+      },
+      "release_date": {
+        "filled": 4550,
+        "total": 4551,
+        "percentage": 99.98
+      },
+      "budget": {
+        "filled": 3550,
+        "total": 4551,
+        "percentage": 78.0
+      },
+      "revenue": {
+        "filled": 3170,
+        "total": 4551,
+        "percentage": 69.66
+      },
+      "vote_average": {
+        "filled": 4488,
+        "total": 4551,
+        "percentage": 98.62
+      },
+      "overview": {
+        "filled": 4550,
+        "total": 4551,
+        "percentage": 99.98
+      },
+      "original_language": {
+        "filled": 4551,
+        "total": 4551,
+        "percentage": 100.0
+      }
+    },
+    "completeness_score": 92.32,
+    "consistency": {
+      "financial_inconsistencies": 773,
+      "future_release_dates": 0,
+      "invalid_ratings": 0,
+      "invalid_durations": 0
+    },
+    "consistency_score": 83.01,
+    "accuracy": {
+      "budget_accuracy": 99.18,
+      "roi_accuracy": 99.6,
+      "rating_accuracy": 92.67
+    },
+    "accuracy_score": 97.15,
+    "timeliness": {
+      "recent_data_percentage": 7.05,
+      "average_age_years": 20.4,
+      "total_movies": 4550,
+      "recent_movies": 321
+    },
+    "timeliness_score": 7.05,
+    "integrity": {
+      "genre_relationship_integrity": 99.38,
+      "keyword_relationship_integrity": 91.08,
+      "duplicate_ids": 0,
+      "id_uniqueness": 100
+    },
+    "integrity_score": 96.82,
+    "uniqueness": {
+      "total_records": 4551,
+      "unique_titles": 4549,
+      "title_year_duplicates": 0,
+      "title_duplicates": 2,
+      "duplicate_records": 2,
+      "uniqueness_percentage": 99.96
+    },
+    "uniqueness_score": 99.96,
+    "compliance": {
+      "data_traceability": 100.0,
+      "potential_personal_data": 117,
+      "retention_compliance": 53.7,
+      "unique_identifiers": 4551,
+      "total_records": 4551
+    },
+    "compliance_score": 76.85,
+    "overall_score": 79.02
+  },
+  "governance_metrics": {
+    "data_cataloging": 99.99,
+    "data_lineage": 100.0,
+    "taxonomy_quality": 99.38,
+    "metadata_completeness": {
+      "title": 100.0,
+      "description": 99.98,
+      "language": 100.0,
+      "date": 99.98
+    },
+    "governance_score": 99.79
+  }
+}

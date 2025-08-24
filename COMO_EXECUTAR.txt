@@ -1,0 +1,82 @@
+===============================================
+COMO EXECUTAR - EXERCÍCIO 1 GESTÃO DE DADOS
+===============================================
+
+📋 PRÉ-REQUISITOS:
+- Python 3.7 ou superior
+- Arquivo movies.csv na mesma pasta
+
+📦 INSTALAÇÃO:
+pip install pandas
+
+🚀 EXECUÇÃO PRINCIPAL:
+python3 data_lifecycle_app.py
+
+📊 DEMONSTRAÇÃO (OPCIONAL):
+python3 demo_consultas.py
+
+===============================================
+ARQUIVOS GERADOS APÓS EXECUÇÃO:
+===============================================
+
+✅ movies.db - Banco de dados SQLite
+✅ relatorios_filmes_*.json - Relatórios
+✅ backup_movies_*.sql - Backup
+✅ data_lifecycle.log - Log de execução
+
+===============================================
+ESTRUTURA FINAL DO PROJETO:
+===============================================
+
+Ex 02/
+├── movies.csv                    # Dados originais
+├── data_lifecycle_app.py         # Aplicação principal
+├── demo_consultas.py             # Script demonstração
+├── database_structure.sql        # Estrutura SQL
+├── README.md                     # Manual completo
+├── RELATORIO_FINAL.md            # Relatório do exercício
+├── COMO_EXECUTAR.txt             # Este arquivo
+├── movies.db                     # Banco gerado
+├── relatorios_filmes_*.json      # Relatórios gerados
+├── backup_movies_*.sql           # Backup gerado
+└── data_lifecycle.log            # Log gerado
+
+===============================================
+FASES IMPLEMENTADAS:
+===============================================
+
+1. 📥 COLETA - Leitura do CSV
+2. 🗄️ ARMAZENAMENTO - Criação do banco
+3. ⚙️ PROCESSAMENTO - Limpeza dos dados
+4. 📊 USO - Geração de relatórios
+5. 🗂️ RETENÇÃO - Políticas de descarte
+
+===============================================
+RESULTADOS ESPERADOS:
+===============================================
+
+✅ 4.803 filmes processados
+✅ 4.551 filmes armazenados
+✅ 252 filmes arquivados
+✅ 22 gêneros catalogados
+✅ 4.393 palavras-chave extraídas
+
+===============================================
+EM CASO DE PROBLEMAS:
+===============================================
+
+❌ "python: command not found"
+   → Use: python3 data_lifecycle_app.py
+
+❌ "No module named 'pandas'"
+   → Execute: pip install pandas
+
+❌ "movies.csv not found"
+   → Certifique-se que o arquivo está na pasta
+
+❌ Outros erros
+   → Verifique o arquivo data_lifecycle.log
+
+===============================================
+EXERCÍCIO CONCLUÍDO COM SUCESSO! ✅
+===============================================

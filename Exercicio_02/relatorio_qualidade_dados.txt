@@ -1,0 +1,53 @@
+================================================================================
+RELATÓRIO DE QUALIDADE DE DADOS E GOVERNANÇA
+Exercício 2 - Gestão Estratégica de Dados
+================================================================================
+Data/Hora: 24/08/2025 10:35:39
+
+RESUMO EXECUTIVO
+----------------------------------------
+Score Geral de Qualidade: 79.02%
+Score de Governança: 99.79%
+Classificação Geral: REGULAR
+
+ANÁLISE POR DIMENSÃO DE QUALIDADE
+----------------------------------------
+✅ Completude: 92.32%
+   • Campo com menor completude: revenue (69.7%)
+✅ Consistência: 83.01%
+   • Total de inconsistências encontradas: 773
+✅ Precisão: 97.15%
+❌ Atualidade: 7.05%
+✅ Integridade: 96.82%
+✅ Unicidade: 99.96%
+   • Registros duplicados: 2
+⚠️ Conformidade: 76.85%
+
+ANÁLISE DE GOVERNANÇA DE DADOS
+----------------------------------------
+✅ Score Geral de Governança: 99.79%
+   • Catalogação de Dados: 99.99%
+   • Linhagem de Dados: 100.00%
+   • Qualidade da Taxonomia: 99.38%
+
+RECOMENDAÇÕES ESTRATÉGICAS
+----------------------------------------
+   ⚖️ PRIORIDADE ALTA: Revisar conformidade com LGPD/GDPR
+
+ASPECTOS DE ÉTICA E PRIVACIDADE (LGPD)
+----------------------------------------
+Verificações realizadas:
+   • Rastreabilidade dos dados: 100.00%
+   • Conformidade de retenção: 53.70%
+   • Dados potencialmente pessoais: 117
+
+Recomendações LGPD:
+   • Implementar política de retenção de dados
+   • Documentar base legal para tratamento
+   • Estabelecer processo de anonimização
+   • Criar mecanismo de exercício de direitos
+
+================================================================================
+Relatório gerado pelo Sistema de Monitoramento de Qualidade de Dados
+Exercício 2 - Gestão de Dados UFG
+================================================================================

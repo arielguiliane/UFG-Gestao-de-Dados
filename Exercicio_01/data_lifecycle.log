@@ -1,0 +1,34 @@
+2025-08-24 10:35:05,968 - INFO - === INICIANDO CICLO COMPLETO DE VIDA DOS DADOS ===
+2025-08-24 10:35:05,969 - INFO - === FASE 1: COLETA DE DADOS ===
+2025-08-24 10:35:06,175 - INFO - Dados coletados: 4803 registros
+2025-08-24 10:35:06,176 - INFO - Colunas encontradas: ['index', 'budget', 'genres', 'homepage', 'id', 'keywords', 'original_language', 'original_title', 'overview', 'popularity', 'production_companies', 'production_countries', 'release_date', 'revenue', 'runtime', 'spoken_languages', 'status', 'tagline', 'title', 'vote_average', 'vote_count', 'cast', 'crew', 'director']
+2025-08-24 10:35:06,176 - INFO - Dados faltantes por coluna:
+2025-08-24 10:35:06,178 - INFO -   genres: 28 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   homepage: 3091 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   keywords: 412 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   overview: 3 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   release_date: 1 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   runtime: 2 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   tagline: 844 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   cast: 43 valores faltantes
+2025-08-24 10:35:06,178 - INFO -   director: 30 valores faltantes
+2025-08-24 10:35:06,178 - INFO - === FASE 2: ARMAZENAMENTO - CRIAÇÃO DE ESTRUTURA ===
+2025-08-24 10:35:06,182 - INFO - Estrutura do banco de dados criada com sucesso
+2025-08-24 10:35:06,182 - INFO - === FASE 3: PROCESSAMENTO E LIMPEZA ===
+2025-08-24 10:35:06,183 - INFO - Limpando dados nulos e inconsistentes...
+2025-08-24 10:35:06,185 - INFO - Padronizando datas...
+2025-08-24 10:35:06,190 - INFO - Limpando campos de texto...
+2025-08-24 10:35:06,246 - INFO - Validando dados numéricos...
+2025-08-24 10:35:06,248 - INFO - Processando campos complexos...
+2025-08-24 10:35:06,251 - INFO - Processados 22 gêneros únicos
+2025-08-24 10:35:06,261 - INFO - Processadas 4393 palavras-chave únicas
+2025-08-24 10:35:06,261 - INFO - Processamento concluído: 4803 registros processados
+2025-08-24 10:35:06,261 - INFO - Armazenando dados processados no banco...
+2025-08-24 10:35:06,819 - INFO - Dados armazenados com sucesso
+2025-08-24 10:35:06,820 - INFO - === FASE 4: USO DOS DADOS - GERAÇÃO DE RELATÓRIOS ===
+2025-08-24 10:35:06,834 - INFO - Relatórios salvos em: relatorios_filmes_20250824_103506.json
+2025-08-24 10:35:06,834 - INFO - Relatórios gerados com sucesso
+2025-08-24 10:35:06,834 - INFO - === FASE 5: RETENÇÃO E DESCARTE ===
+2025-08-24 10:35:06,930 - INFO - Backup criado: backup_movies_20250824_103506.sql
+2025-08-24 10:35:06,936 - INFO - Política de retenção aplicada: {'filmes_arquivados': 252, 'logs_auditoria_removidos': 0, 'backup_realizado': True, 'duplicatas_removidas': 0, 'data_execucao': '2025-08-24T10:35:06.935557'}
+2025-08-24 10:35:06,936 - INFO - Ciclo concluído. Fases executadas: Coleta, Armazenamento, Processamento, Uso, Retenção

@@ -1,0 +1,369 @@
+{
+  "estatisticas_gerais": {
+    "total_filmes": 4803,
+    "orcamento_medio": 37042837.63,
+    "receita_media": 117031352.92,
+    "nota_media": 6.17,
+    "duracao_media": 107.66
+  },
+  "top_filmes_receita": [
+    {
+      "titulo": "Avatar",
+      "receita": 2787965087,
+      "orcamento": 237000000,
+      "lucro": 2550965087
+    },
+    {
+      "titulo": "Titanic",
+      "receita": 1845034188,
+      "orcamento": 200000000,
+      "lucro": 1645034188
+    },
+    {
+      "titulo": "The Avengers",
+      "receita": 1519557910,
+      "orcamento": 220000000,
+      "lucro": 1299557910
+    },
+    {
+      "titulo": "Jurassic World",
+      "receita": 1513528810,
+      "orcamento": 150000000,
+      "lucro": 1363528810
+    },
+    {
+      "titulo": "Furious 7",
+      "receita": 1506249360,
+      "orcamento": 190000000,
+      "lucro": 1316249360
+    },
+    {
+      "titulo": "Avengers: Age of Ultron",
+      "receita": 1405403694,
+      "orcamento": 280000000,
+      "lucro": 1125403694
+    },
+    {
+      "titulo": "Frozen",
+      "receita": 1274219009,
+      "orcamento": 150000000,
+      "lucro": 1124219009
+    },
+    {
+      "titulo": "Iron Man 3",
+      "receita": 1215439994,
+      "orcamento": 200000000,
+      "lucro": 1015439994
+    },
+    {
+      "titulo": "Minions",
+      "receita": 1156730962,
+      "orcamento": 74000000,
+      "lucro": 1082730962
+    },
+    {
+      "titulo": "Captain America: Civil War",
+      "receita": 1153304495,
+      "orcamento": 250000000,
+      "lucro": 903304495
+    }
+  ],
+  "analise_generos": [
+    {
+      "genero": "Drama",
+      "total_filmes": 2275,
+      "nota_media": 6.45,
+      "receita_media": 52620206.66,
+      "orcamento_medio": 20876796.33
+    },
+    {
+      "genero": "Comedy",
+      "total_filmes": 1709,
+      "nota_media": 5.99,
+      "receita_media": 71831783.27,
+      "orcamento_medio": 25505097.6
+    },
+    {
+      "genero": "Thriller",
+      "total_filmes": 1250,
+      "nota_media": 6.06,
+      "receita_media": 81807504.8,
+      "orcamento_medio": 32034796.34
+    },
+    {
+      "genero": "Action",
+      "total_filmes": 1148,
+      "nota_media": 6.02,
+      "receita_media": 141858545.76,
+      "orcamento_medio": 51736155.57
+    },
+    {
+      "genero": "Romance",
+      "total_filmes": 887,
+      "nota_media": 6.23,
+      "receita_media": 59650110.6,
+      "orcamento_medio": 20251474.34
+    },
+    {
+      "genero": "Adventure",
+      "total_filmes": 790,
+      "nota_media": 6.16,
+      "receita_media": 208660204.49,
+      "orcamento_medio": 66326861.35
+    },
+    {
+      "genero": "Crime",
+      "total_filmes": 691,
+      "nota_media": 6.32,
+      "receita_media": 66629316.0,
+      "orcamento_medio": 28047852.35
+    },
+    {
+      "genero": "Science",
+      "total_filmes": 529,
+      "nota_media": 6.03,
+      "receita_media": 153683425.95,
+      "orcamento_medio": 52126786.13
+    },
+    {
+      "genero": "Fiction",
+      "total_filmes": 529,
+      "nota_media": 6.03,
+      "receita_media": 153683425.95,
+      "orcamento_medio": 52126786.13
+    },
+    {
+      "genero": "Horror",
+      "total_filmes": 513,
+      "nota_media": 5.69,
+      "receita_media": 44054375.56,
+      "orcamento_medio": 14744487.31
+    },
+    {
+      "genero": "Family",
+      "total_filmes": 507,
+      "nota_media": 6.06,
+      "receita_media": 162704333.57,
+      "orcamento_medio": 50787198.47
+    },
+    {
+      "genero": "Fantasy",
+      "total_filmes": 418,
+      "nota_media": 6.09,
+      "receita_media": 193888451.18,
+      "orcamento_medio": 63551905.73
+    },
+    {
+      "genero": "Mystery",
+      "total_filmes": 344,
+      "nota_media": 6.24,
+      "receita_media": 79211403.38,
+      "orcamento_medio": 31049655.38
+    },
+    {
+      "genero": "Animation",
+      "total_filmes": 234,
+      "nota_media": 6.34,
+      "receita_media": 225693025.06,
+      "orcamento_medio": 66465901.95
+    },
+    {
+      "genero": "History",
+      "total_filmes": 197,
+      "nota_media": 6.72,
+      "receita_media": 57523562.09,
+      "orcamento_medio": 29903466.65
+    },
+    {
+      "genero": "Music",
+      "total_filmes": 181,
+      "nota_media": 6.43,
+      "receita_media": 49189005.79,
+      "orcamento_medio": 16182156.33
+    },
+    {
+      "genero": "War",
+      "total_filmes": 142,
+      "nota_media": 6.71,
+      "receita_media": 84684084.89,
+      "orcamento_medio": 35075168.16
+    },
+    {
+      "genero": "Documentary",
+      "total_filmes": 103,
+      "nota_media": 6.66,
+      "receita_media": 10507550.27,
+      "orcamento_medio": 2799084.69
+    },
+    {
+      "genero": "Western",
+      "total_filmes": 77,
+      "nota_media": 6.42,
+      "receita_media": 49024516.75,
+      "orcamento_medio": 28746150.66
+    },
+    {
+      "genero": "Foreign",
+      "total_filmes": 34,
+      "nota_media": 6.35,
+      "receita_media": 364651.5,
+      "orcamento_medio": 658088.44
+    },
+    {
+      "genero": "TV",
+      "total_filmes": 8,
+      "nota_media": 5.66,
+      "receita_media": 0,
+      "orcamento_medio": 1150000.0
+    },
+    {
+      "genero": "Movie",
+      "total_filmes": 8,
+      "nota_media": 5.66,
+      "receita_media": 0,
+      "orcamento_medio": 1150000.0
+    }
+  ],
+  "tendencias_temporais": [
+    {
+      "ano": "2000",
+      "total_filmes": 166,
+      "orcamento_medio": 32850602.59,
+      "receita_media": 65977218.9,
+      "nota_media": 5.96
+    },
+    {
+      "ano": "2001",
+      "total_filmes": 183,
+      "orcamento_medio": 30349816.53,
+      "receita_media": 72512949.67,
+      "nota_media": 6.05
+    },
+    {
+      "ano": "2002",
+      "total_filmes": 203,
+      "orcamento_medio": 28886434.33,
+      "receita_media": 71969741.66,
+      "nota_media": 6.1
+    },
+    {
+      "ano": "2003",
+      "total_filmes": 169,
+      "orcamento_medio": 31561764.0,
+      "receita_media": 84102482.0,
+      "nota_media": 6.01
+    },
+    {
+      "ano": "2004",
+      "total_filmes": 204,
+      "orcamento_medio": 31494106.62,
+      "receita_media": 79797483.17,
+      "nota_media": 6.1
+    },
+    {
+      "ano": "2005",
+      "total_filmes": 217,
+      "orcamento_medio": 29256149.88,
+      "receita_media": 68809166.9,
+      "nota_media": 6.07
+    },
+    {
+      "ano": "2006",
+      "total_filmes": 237,
+      "orcamento_medio": 28010675.01,
+      "receita_media": 70193640.3,
+      "nota_media": 6.13
+    },
+    {
+      "ano": "2007",
+      "total_filmes": 195,
+      "orcamento_medio": 30731525.76,
+      "receita_media": 84572418.74,
+      "nota_media": 6.09
+    },
+    {
+      "ano": "2008",
+      "total_filmes": 227,
+      "orcamento_medio": 31519599.56,
+      "receita_media": 79940439.66,
+      "nota_media": 6.1
+    },
+    {
+      "ano": "2009",
+      "total_filmes": 247,
+      "orcamento_medio": 30949258.15,
+      "receita_media": 85314378.57,
+      "nota_media": 6.07
+    },
+    {
+      "ano": "2010",
+      "total_filmes": 225,
+      "orcamento_medio": 34495410.94,
+      "receita_media": 90438110.08,
+      "nota_media": 5.97
+    },
+    {
+      "ano": "2011",
+      "total_filmes": 223,
+      "orcamento_medio": 34772320.34,
+      "receita_media": 92004130.76,
+      "nota_media": 6.01
+    },
+    {
+      "ano": "2012",
+      "total_filmes": 208,
+      "orcamento_medio": 34922031.99,
+      "receita_media": 116065914.64,
+      "nota_media": 5.91
+    },
+    {
+      "ano": "2013",
+      "total_filmes": 231,
+      "orcamento_medio": 35523293.65,
+      "receita_media": 101348455.82,
+      "nota_media": 6.09
+    },
+    {
+      "ano": "2014",
+      "total_filmes": 238,
+      "orcamento_medio": 30959887.86,
+      "receita_media": 101346599.11,
+      "nota_media": 5.58
+    },
+    {
+      "ano": "2015",
+      "total_filmes": 216,
+      "orcamento_medio": 31132163.74,
+      "receita_media": 105439926.95,
+      "nota_media": 5.59
+    },
+    {
+      "ano": "2016",
+      "total_filmes": 104,
+      "orcamento_medio": 45703269.23,
+      "receita_media": 139049586.04,
+      "nota_media": 5.83
+    },
+    {
+      "ano": "2017",
+      "total_filmes": 1,
+      "orcamento_medio": 0,
+      "receita_media": 0,
+      "nota_media": 7.4
+    }
+  ],
+  "analise_qualidade": {
+    "completude": {
+      "title": 100.0,
+      "release_date": 99.98,
+      "budget": 78.41,
+      "revenue": 70.29,
+      "runtime": 99.23,
+      "vote_average": 98.69,
+      "overview": 99.98
+    },
+    "inconsistencias": {
+      "filmes_com_receita_menor_que_orcamento": 789
+    }
+  }
+}
