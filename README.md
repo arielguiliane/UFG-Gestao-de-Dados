@@ -1,3 +1,10 @@
+# 🎓 UFG - Gestão de Dados
+
+> **Repositório das atividades da disciplina de Gestão de Dados - UFG**
+> Implementações práticas de conceitos de ciclo de vida, qualidade e governança de dados
+
+---
+
 # Gestão do Ciclo de Vida de Dados - Exercício 1
 
 ## 📋 Descrição do Projeto
