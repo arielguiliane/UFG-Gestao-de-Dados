@@ -1,0 +1,26 @@
+{
+  "titulo": "Teste do Sistema",
+  "geradoEm": "2025-09-04T14:39:35.597Z",
+  "dados": [
+    {
+      "produto": "Smartphone",
+      "preco": 1299.99,
+      "categoria": "eletrônicos"
+    },
+    {
+      "produto": "Notebook",
+      "preco": 2199.99,
+      "categoria": "informática"
+    },
+    {
+      "cidade": "Goiânia",
+      "temperatura": 28.5,
+      "uf": "GO"
+    }
+  ],
+  "estatisticas": {
+    "totalRegistros": 3,
+    "precoMedio": 1749.99,
+    "temperaturaMedia": 28.5
+  }
+}

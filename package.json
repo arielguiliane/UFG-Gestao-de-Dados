@@ -1,0 +1,43 @@
+{
+  "name": "sistema-coleta-dados",
+  "version": "1.0.0",
+  "description": "Sistema de coleta automatizada de dados - Magazine Luiza e INMET",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "scraper": "node src/exercicio1/scraper/magalu-scraper.js",
+    "weather": "node src/exercicio1/api/inmet-client.js",
+    "database": "node src/exercicio2/database/database-manager.js",
+    "setup-db": "node src/exercicio2/database/setup-database.js",
+    "pipeline": "node src/exercicio3/pipeline-manager.js",
+    "file-processor": "node src/exercicio3/file-processor/file-processor.js",
+    "stream-processor": "node src/exercicio3/stream-processor/stream-processor.js",
+    "reports": "node src/exercicio3/reports/report-generator.js",
+    "anomaly-detector": "node src/exercicio3/alerts/anomaly-detector.js",
+    "test": "node src/test/test-all.js",
+    "test-db": "node src/test/test-database.js",
+    "test-pipeline": "node src/test/test-pipeline.js"
+  },
+  "keywords": [
+    "web-scraping",
+    "api-client",
+    "magazine-luiza",
+    "inmet",
+    "dados-meteorologicos"
+  ],
+  "author": "Estudante UFG",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.0.0",
+    "dotenv": "^16.3.0",
+    "pg": "^8.11.0",
+    "mongodb": "^6.0.0",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
