@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Warehouse E-commerce - Projeto Acadêmico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .dashboard-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .dashboard-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .feature-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📊</div>
+        <h1>Data Warehouse E-commerce</h1>
+        <p class="subtitle">Projeto Acadêmico - Gestão de Dados</p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-number">R$ 15.270</div>
+                <div class="info-label">Receita Total</div>
+            </div>
+            <div class="info-card">
+                <div class="info-number">13</div>
+                <div class="info-label">Pedidos</div>
+            </div>
+            <div class="info-card">
+                <div class="info-number">2.192</div>
+                <div class="info-label">Registros Tempo</div>
+            </div>
+            <div class="info-card">
+                <div class="info-number">6</div>
+                <div class="info-label">Tabelas</div>
+            </div>
+        </div>
+
+        <a href="dashboard/dashboard.html" class="dashboard-btn">
+            🚀 Acessar Dashboard
+        </a>
+
+        <div class="features">
+            <h3 style="color: #333; margin-bottom: 15px;">🎯 Características Implementadas:</h3>
+            <div class="feature-item">
+                <span class="feature-icon">✅</span>
+                <span>Subject-Oriented: Focado no domínio E-commerce</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✅</span>
+                <span>Integrated: Dados consolidados de múltiplas fontes</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✅</span>
+                <span>Non-Volatile: Dados históricos preservados</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✅</span>
+                <span>Time-Variant: Dimensão temporal completa (2020-2025)</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">📊</span>
+                <span>Star Schema: 5 dimensões + 1 tabela fato</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🔍</span>
+                <span>Testes de Qualidade: Validação completa dos dados</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <span>Performance Otimizada: Índices e consultas rápidas</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Tecnologias:</strong> MySQL, HTML5, CSS3, Chart.js</p>
+            <p><strong>Modelo:</strong> Dimensional (Kimball) | <strong>Arquitetura:</strong> Star Schema</p>
+            <p>Desenvolvido para disciplina de Gestão de Dados - UFG</p>
+        </div>
+    </div>
+</body>
+</html>
