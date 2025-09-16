@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Data Warehouse E-commerce</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .table-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .data-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .data-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-success { background-color: #28a745; }
+        .status-warning { background-color: #ffc107; }
+        .status-error { background-color: #dc3545; }
+
+        .refresh-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Dashboard Data Warehouse</h1>
+            <p>Análise em Tempo Real - E-commerce</p>
+            <button class="refresh-btn" onclick="loadData()">🔄 Atualizar Dados</button>
+        </div>
+
+        <!-- Métricas Principais -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="receita-total">R$ 15.270,72</div>
+                <div class="metric-label">Receita Total</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="margem-total">R$ 4.510,72</div>
+                <div class="metric-label">Margem Bruta</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="total-pedidos">13</div>
+                <div class="metric-label">Total Pedidos</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="ticket-medio">R$ 1.174,67</div>
+                <div class="metric-label">Ticket Médio</div>
+            </div>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-title">📈 Vendas por Mês</div>
+                <canvas id="vendasMesChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">🏆 Top 5 Clientes</div>
+                <canvas id="topClientesChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📦 Produtos Mais Vendidos</div>
+                <canvas id="topProdutosChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">🛒 Canais de Venda</div>
+                <canvas id="canaisChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Tabelas de Dados -->
+        <div class="table-card">
+            <div class="chart-title">📋 Status do Data Warehouse</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Status</th>
+                        <th>Registros</th>
+                        <th>Última Atualização</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DIM_TEMPO</td>
+                        <td><span class="status-indicator status-success"></span>Ativo</td>
+                        <td>2.192</td>
+                        <td>Hoje</td>
+                    </tr>
+                    <tr>
+                        <td>DIM_CLIENTE</td>
+                        <td><span class="status-indicator status-success"></span>Ativo</td>
+                        <td>10</td>
+                        <td>Hoje</td>
+                    </tr>
+                    <tr>
+                        <td>DIM_PRODUTO</td>
+                        <td><span class="status-indicator status-success"></span>Ativo</td>
+                        <td>10</td>
+                        <td>Hoje</td>
+                    </tr>
+                    <tr>
+                        <td>FATO_VENDAS</td>
+                        <td><span class="status-indicator status-success"></span>Ativo</td>
+                        <td>21</td>
+                        <td>Hoje</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Top Clientes Tabela -->
+        <div class="table-card">
+            <div class="chart-title">🏆 Ranking de Clientes</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Cliente</th>
+                        <th>Segmento</th>
+                        <th>Pedidos</th>
+                        <th>Receita</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🥇 1º</td>
+                        <td>Marcos Alves</td>
+                        <td>Premium</td>
+                        <td>1</td>
+                        <td>R$ 3.299,99</td>
+                    </tr>
+                    <tr>
+                        <td>🥈 2º</td>
+                        <td>Maria Santos</td>
+                        <td>VIP</td>
+                        <td>2</td>
+                        <td>R$ 2.924,96</td>
+                    </tr>
+                    <tr>
+                        <td>🥉 3º</td>
+                        <td>João Silva</td>
+                        <td>Premium</td>
+                        <td>2</td>
+                        <td>R$ 2.776,40</td>
+                    </tr>
+                    <tr>
+                        <td>4º</td>
+                        <td>Roberto Lima</td>
+                        <td>Premium</td>
+                        <td>1</td>
+                        <td>R$ 2.499,99</td>
+                    </tr>
+                    <tr>
+                        <td>5º</td>
+                        <td>Juliana Barbosa</td>
+                        <td>Premium</td>
+                        <td>1</td>
+                        <td>R$ 999,98</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Dados baseados no nosso DW real
+        const dadosVendasMes = {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            datasets: [{
+                label: 'Receita (R$)',
+                data: [2500, 3200, 2800, 3100, 2400, 1170],
+                backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                borderColor: 'rgba(102, 126, 234, 1)',
+                borderWidth: 2,
+                fill: true
+            }]
+        };
+
+        const dadosTopClientes = {
+            labels: ['Marcos Alves', 'Maria Santos', 'João Silva', 'Roberto Lima', 'Juliana Barbosa'],
+            datasets: [{
+                label: 'Receita (R$)',
+                data: [3299.99, 2924.96, 2776.40, 2499.99, 999.98],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 205, 86, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)'
+                ]
+            }]
+        };
+
+        // Criar gráficos
+        function criarGraficos() {
+            // Gráfico de Vendas por Mês
+            const ctxVendas = document.getElementById('vendasMesChart').getContext('2d');
+            new Chart(ctxVendas, {
+                type: 'line',
+                data: dadosVendasMes,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'R$ ' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Gráfico Top Clientes
+            const ctxClientes = document.getElementById('topClientesChart').getContext('2d');
+            new Chart(ctxClientes, {
+                type: 'bar',
+                data: dadosTopClientes,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'R$ ' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Gráfico Produtos
+            const ctxProdutos = document.getElementById('topProdutosChart').getContext('2d');
+            new Chart(ctxProdutos, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Notebook Dell', 'iPhone 15', 'Samsung Galaxy', 'Camiseta Nike', 'Livro Python'],
+                    datasets: [{
+                        data: [3299.99, 2499.99, 1899.99, 149.99, 89.90],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.8)',
+                            'rgba(54, 162, 235, 0.8)',
+                            'rgba(255, 205, 86, 0.8)',
+                            'rgba(75, 192, 192, 0.8)',
+                            'rgba(153, 102, 255, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+
+            // Gráfico Canais
+            const ctxCanais = document.getElementById('canaisChart').getContext('2d');
+            new Chart(ctxCanais, {
+                type: 'pie',
+                data: {
+                    labels: ['E-commerce', 'Loja Física', 'Mobile App', 'Marketplace'],
+                    datasets: [{
+                        data: [45, 30, 15, 10],
+                        backgroundColor: [
+                            'rgba(102, 126, 234, 0.8)',
+                            'rgba(118, 75, 162, 0.8)',
+                            'rgba(255, 159, 64, 0.8)',
+                            'rgba(75, 192, 192, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        }
+
+        function loadData() {
+            // Simular carregamento de dados
+            console.log('Atualizando dados do dashboard...');
+            // Aqui você conectaria com o MySQL via API
+            alert('Dados atualizados! (Em uma implementação real, isso buscaria dados do MySQL)');
+        }
+
+        // Inicializar dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            criarGraficos();
+        });
+    </script>
+</body>
+</html>
